@@ -14,7 +14,7 @@ ENV CUDA_VER1 7
 ENV CUDA_VER2 5
 ENV CUDA_VER3 18
 
-ENV DRIVER_VER 355.06
+ENV DRIVER_VER 355.11
 
 #todo: make a check for driver download existence
 #installing the driver from cuda does not work
