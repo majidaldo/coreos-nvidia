@@ -5,7 +5,7 @@ This is a Dockerfile that builds a container with nvidia GPU drivers and CUDA.
 
 The purpose of the steps in this section is to load the NVIDIA drivers.
 
-1. Build: `docker build -t nvidia github.com/majidaldo/coreos-nvidia` (can be built on any machine but not recommended. alternatively just download the image: `docker pull majidaldoiongithub/coreos-nvidia`) <br>
+1. Build: `docker build -t nvidia github.com/majidaldo/coreos-nvidia[#abranch]` (can be built on any machine but not recommended. alternatively just download the image: `docker pull majidaldoiongithub/coreos-nvidia:abranch`) <br>
 2. Run: `docker run --rm --privileged nvidia` (on the NVIDIA machine of course) <br>
    You should see your NVIDIA harware printed.<br>
 3. Confirm module is loaded: `lsmod | grep -i nvidia`<br>
