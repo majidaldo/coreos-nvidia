@@ -26,7 +26,7 @@ update-alternatives --install \
 		    --slave \
 		    /usr/bin/g++ g++ /usr/bin/g++-${DRIVER_GCC_VER}
 #print gcc ver to check
-update-alternatives --config gcc
+update-alternatives --set gcc "/usr/bin/gcc-${DRIVER_GCC_VER}"
 
 #prepare source for modules
 
