@@ -1,5 +1,3 @@
-## -*- docker-image-name: "nvidia" -*-
-
 FROM ubuntu:15.04
 MAINTAINER Majid alDosari
 
@@ -14,7 +12,8 @@ ENV CUDA_VER1 7
 ENV CUDA_VER2 5
 ENV CUDA_VER3 18
 
-ENV DRIVER_VER 355.11
+#jan. 5, 2016
+ENV DRIVER_VER 361.16
 
 #todo: make a check for driver download existence
 #installing the driver from cuda does not work
@@ -24,6 +23,7 @@ ENV DRIVER_VER 355.11
 
 RUN apt-get -y update && apt-get -y install \
     gcc-${CUDA_GCC_VER} g++-${CUDA_GCC_VER} \
+    libssl-dev bc \
     wget curl git make dpkg-dev module-init-tools && \
     mkdir -p /usr/src/kernels && \
     mkdir -p /opt/nvidia && \
@@ -122,4 +122,3 @@ ONBUILD RUN echo "/usr/local/cuda/lib64" \
 # 
 ONBUILD WORKDIR /root
 ONBUILD CMD /bin/bash
-
